@@ -1,0 +1,244 @@
+/* Beginner-friendly CSS scaffold for a personal website */
+/* Enhanced modern palette and accent colors */
+:root {
+  --bg: #f4f6fc;
+  --card: #ffffff;
+  --muted: #5a6270;
+  --accent: #3b82f6;
+  --accent-dark: #000000;
+  --accent-light: #ffffff;
+  --radius: 16px;
+  --gap: 1.5rem;
+  --shadow: 0 8px 24px rgba(60, 72, 100, 0.10);
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: #1e293b;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+
+.site-header {
+  background: linear-gradient(0deg, #ffffffcc, #000000cc);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+}
+.header-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-title {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent-dark);
+}
+.site-nav a {
+  margin-left: 1.2rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+.site-nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.site-nav a:hover {
+  color: var(--accent);
+}
+.site-nav a:hover::after {
+  width: 100%;
+}
+
+
+.hero {
+  padding: 2.5rem 0 2rem 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: var(--gap);
+  align-items: center;
+}
+.hero-text h2 {
+  margin-top: 0;
+  font-size: 2.1rem;
+  color: var(--accent-dark);
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-light), #fff);
+  box-shadow: var(--shadow);
+  border: 4px solid var(--accent-light);
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.10);
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+}
+.btn:hover {
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem auto;
+  box-shadow: var(--shadow);
+}
+
+/* Contact form styles: center inputs and make them full-width within a comfortable max-width */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.contact-form label {
+  align-self: flex-start;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 640px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #dbeafe;
+  background: #fff;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.10);
+}
+.form-actions {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+}
+
+
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+.project {
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #000000);
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.project:hover {
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.12);
+  transform: translateY(-2px) scale(1.02);
+}
+
+
+.skills-list {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skills-list li {
+  background: var(--accent-light);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  color: var(--muted);
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.04);
+}
+
+
+.site-footer {
+  padding: 1.2rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  background: linear-gradient(90deg, #e0e7ffcc, #f1f5f9cc);
+  box-shadow: var(--shadow);
+}
+
+/* Responsive rules for smaller screens */
+
+@media (max-width: 720px) {
+  .container {
+    padding: 1rem;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .projects .grid {
+    grid-template-columns: 1fr;
+  }
+  .site-nav {
+    display: none;
+  }
+  .card {
+    padding: 1rem;
+  }
+}
+
+/* Helpful tips for learners */
+/* - Change --accent value to update the primary color globally. */
+/* - Try adding a :root { --accent: #f97316 } line and reload the page. */
+
+.exercises {
+  color: blue;
+}
+
+.site-header {
+    background: linear-gradient( crimson, rgb(255, 255, 255));
+}   
