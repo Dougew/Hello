@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Personal Website. I am a Beginner HTML/CSS Scaffold</title>
+    <meta name="description" content="A simple personal website scaffold for beginners to learn HTML &amp; CSS" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <h1 class="site-title">Shaurya Sareen</h1><strong>
+        <nav class="site-nav">
+          <a href="#about">About Me</a>
+          <a href="#skills">My Skills</a>
+          <a href="#contact">Contact Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h2>Hi, I'm a beginner web developer</h2>
+            <p>
+            </p>
+          </div>
+          <div class="hero-image">
+            <img src="Gr8 Grad.HEIC" alt="A person coding on a laptop" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container card">
+        <h3>About</h3>
+        <p>
+            My name is Shaurya Sareen. I am a beginner web developer learning HTML and CSS. I enjoy creating simple and effective web pages that are both functional and visually appealing. I am excited to continue my journey in web development and explore new technologies and techniques. My knowegledge is coming from the Comm Tech Clun at White Oaks Secondary School.
+      </section>
+
+      <section id="projects" class="container projects">
+       
+      <section id="skills" class="container card">
+        <h3>Skills</h3>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Responsive design</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="container card">
+        <h3>Contact</h3>
+        <p>
+          If you'd like, visitors you can send me a message.
+        </p>
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name here" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write a short message..."></textarea>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Send message</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="container card exercises">
+        <h3>Exercises</h3>
+        <ol>
+          <li>
+            Edit the heading text and change the colors in <code>styles.css</code>.
+          </li>
+          <li>
+            Add a new project card under <em>Projects</em>.
+          </li>
+          <li>
+            Create a contact form (name, email, message) and style it responsively.
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year">2025</span> Your Name — Built with HTML &amp; CSS</p>
+      </div>
+    </footer>
+
+    <script>
+      // small script to keep footer year current
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
